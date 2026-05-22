@@ -2,40 +2,47 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const features = [
-    { icon: "⚡", title: "Lightning Fast", desc: "Powered by Next.js 14 with the App Router and React Server Components." },
-    { icon: "🚀", title: "Deploy Instantly", desc: "Push to GitHub and Vercel auto-deploys every commit in seconds." },
-    { icon: "🔒", title: "Production Ready", desc: "TypeScript, ESLint, and best practices baked in from day one." },
-    { icon: "🌐", title: "Global Edge", desc: "Vercel's edge network serves your app from 100+ locations worldwide." },
+    { icon: "⚡", title: "Lightning Fast", desc: "Next.js 14 App Router with React Server Components for blazing performance." },
+    { icon: "🚀", title: "Auto Deploy", desc: "Every push to GitHub triggers an instant Vercel deployment automatically." },
+    { icon: "🔒", title: "Type Safe", desc: "TypeScript and ESLint configured out of the box for solid, safe code." },
+    { icon: "🌐", title: "Edge Network", desc: "Served from 100+ global locations — fast for every user, everywhere." },
+    { icon: "🎨", title: "Fully Styled", desc: "CSS Modules with a clean design system. Easy to customise and extend." },
+    { icon: "📦", title: "Zero Config", desc: "Deploy without touching a single config file. Vercel handles everything." },
   ];
 
   return (
     <main className={styles.main}>
       <nav className={styles.nav}>
-        <span className={styles.logo}>▲ my-app</span>
+        <span className={styles.logo}>◆ my-app</span>
         <div className={styles.navLinks}>
           <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer">Docs</a>
-          <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className={styles.navCta}>Deploy</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className={styles.navCta}>Deploy ↗</a>
         </div>
       </nav>
 
       <section className={styles.hero}>
-        <div className={styles.badge}>Next.js 14 + Vercel</div>
+        <div className={styles.badge}>
+          <span className={styles.badgeDot}></span>
+          v2 — design update branch
+        </div>
         <h1 className={styles.title}>
-          Build fast.<br />
-          <span className={styles.titleAccent}>Ship faster.</span>
+          Ship your idea<br />
+          <span className={styles.titleAccent}>to the world.</span>
         </h1>
         <p className={styles.subtitle}>
-          Your Next.js app is ready. Push to GitHub,<br />
-          connect to Vercel, and go live in minutes.
+          Next.js gives you the foundation. Vercel gives you the runway.
+          Push code, go live — no DevOps needed.
         </p>
         <div className={styles.actions}>
-          <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
-            Push to GitHub →
+          <a href="https://vercel.com/new" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+            Get started free
           </a>
-          <a href="https://vercel.com/new" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
-            Deploy to Vercel
+          <a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+            Read the docs →
           </a>
         </div>
+        <p className={styles.heroNote}>No credit card required · Deploys in under 60 seconds</p>
       </section>
 
       <section className={styles.grid}>
@@ -48,8 +55,18 @@ export default function Home() {
         ))}
       </section>
 
+      <section className={styles.cta}>
+        <h2 className={styles.ctaTitle}>Ready to deploy?</h2>
+        <p className={styles.ctaDesc}>Connect your repo and go live in minutes.</p>
+        <a href="https://vercel.com/new" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+          Deploy to Vercel ↗
+        </a>
+      </section>
+
       <footer className={styles.footer}>
-        <p>Built with <span className={styles.heart}>♥</span> using Next.js — ready for Vercel</p>
+        <span>Built with <span className={styles.heart}>♥</span> using Next.js</span>
+        <span className={styles.footerDivider}>·</span>
+        <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Hosted on Vercel</a>
       </footer>
     </main>
   );
